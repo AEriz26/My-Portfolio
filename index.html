@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="set.css">
+    <!-- Google Fonts for clean typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header>
+        <a href="#" class="logo-img-link">
+            <img src="logo.png" alt="Faizal Logo" class="nav-logo">
+        </a>
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- 1. Home Section -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hi, It's Me</h3>
+            <h1>Faizal</h1>
+            <h3>And I'm a <span class="text-animate">Graphics Designer</span></h3>
+            <p>"Design is more than just making things look good—it’s about solving problems and sparking emotions. I am a passionate graphics designer dedicated to crafting unique brand identities and visuals that leave a lasting impression. Explore my work and let's bring your vision to life."</p>
+            
+            <div class="btn-box">
+                <a href="#contact" class="btn">Hire Me</a>
+                <a href="#contact" class="btn">Let's Talk</a>
+            </div>
+        </div>
+
+        <!-- Visual Image Circle -->
+        <div class="img-box">
+            <div class="circle-animate"></div>
+            <img src="profile.jpg" alt="Faizal Profile Picture" class="hero-avatar">
+        </div>
+    </section>
+
+    <!-- 2. About Section -->
+    <section class="about" id="about">
+        <div class="about-container">
+            
+            <!-- Left Side: Profile Circle & Title Block -->
+            <div class="about-left">
+                <div class="about-img-box">
+                    <div class="about-circle-animate"></div>
+                    <img src="about.jpg" alt="Faizal Profile" class="about-avatar">
+                </div>
+                <h2 class="about-heading">WHO IS FAIZAL?</h2>
+                <p class="about-subheading">A PASSIONATE GRAPHICS DESIGNER</p>
+            </div>
+
+            <!-- Right Side: Content & Skills Grid -->
+            <div class="about-right">
+                <h2 class="content-title">MEET THE CREATOR</h2>
+                
+                <p class="about-text">
+                    Based in Trece Martires, Calabarzon, I am a dedicated Graphics Designer with a focus on purposeful and emotionally resonant visual storytelling. My design journey began with a curiosity about how visuals can shape perceptions and solve problems. 
+                </p>
+                <p class="about-text">
+                    I specialize in creating robust brand identities and user experiences that connect with audiences. When not designing, you might find me exploring new design tools, sketching layout concepts, or refining my vector art style. Explore how I blend strategic thinking with creative passion.
+                </p>
+
+                <!-- Information Grid (Skills & Approach) -->
+                <div class="about-grid">
+                    
+                    <!-- Core Skills Column -->
+                    <div class="grid-column">
+                        <h3><span class="icon">💡</span> Core Skills</h3>
+                        <ul class="skills-list">
+                            <li><span>📐</span> Logo Design</li>
+                            <li><span>🖼️</span> Image Editor</li>
+                            <li><span>🎬</span> Video Editor</li>
+                            <li><span>🎞️</span> Short Animation</li>
+                            <li><span>📊</span> Data Entry</li>
+                        </ul>
+                    </div>
+
+                    <!-- My Approach Column -->
+                    <div class="grid-column">
+                        <h3><span class="icon">⚙️</span> My Approach</h3>
+                        <ul class="approach-list">
+                            <li><span>🔍</span> Research</li>
+                            <li><span>🤝</span> Collaborate</li>
+                            <li><span>🔄</span> Iterate</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 3. Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <h2 class="section-title">My <span>Portfolio</span></h2>
+        <p class="section-subtitle">Recent Projects & Creative Showcase</p>
+
+        <div class="portfolio-grid">
+            <!-- Card 1: Logo Design -->
+            <div class="portfolio-card">
+                <div class="card-img-box">
+                    <img src="logosample.jpg" alt="Logo Design Project">
+                </div>
+                <div class="card-layer">
+                    <h4>Logo Design</h4>
+                    <p>Modern vector brand identities, typography layouts, and conceptual minimalist corporate marks.</p>
+                </div>
+            </div>
+
+            <!-- Card 2: Image Editing -->
+            <div class="portfolio-card">
+                <div class="card-img-box">
+                    <img src="edit.jpg" alt="Image Editing Project">
+                </div>
+                <div class="card-layer">
+                    <h4>Image Editing</h4>
+                    <p>Advanced digital manipulation, color grading, photo retouching, and complex compositing workflows.</p>
+                </div>
+            </div>
+
+            <!-- Card 3: Video Production -->
+            <div class="portfolio-card">
+                <div class="card-img-box">
+                    <img src="videoedit.jpg" alt="Video Editing Project">
+                </div>
+                <div class="card-layer">
+                    <h4>Video Editing</h4>
+                    <p>High-energy sequence cuts, pacing fixes, cinematic grading, and seamless audio synchronization.</p>
+                </div>
+            </div>
+
+            <!-- Card 4: Animation & Data -->
+            <div class="portfolio-card">
+                <div class="card-img-box">
+                    <img src="animation.jpg" alt="Animation Project">
+                </div>
+                <div class="card-layer">
+                    <h4>Short Animation</h4>
+                    <p>Dynamic motion graphics, kinetic typography sequences, logo reveals, and custom UI transitions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Contact Section (CONNECTED TO GMAIL) -->
+    <section class="contact" id="contact">
+        <h2 class="section-title">Contact <span>Me</span></h2>
+        <p class="section-subtitle">Let's collaborate on your next big creative project!</p>
+
+        <!-- Web3Forms Endpoint Integration -->
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+            
+            <!-- REQUIRED: Paste your Web3Forms Access Key here -->
+            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+            
+            <!-- OPTIONAL: Customizes the subject line of the email you receive -->
+            <input type="hidden" name="subject" value="New Portfolio Contact Submission">
+            
+            <!-- OPTIONAL: Anti-spam Honeypot field (hidden from real users) -->
+            <input type="hidden" name="from_name" value="Portfolio Notification">
+            <input type="checkbox" name="botcheck" class="hidden-honeypot" style="display: none;">
+
+            <div class="input-box">
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+            </div>
+            <div class="input-box">
+                <input type="tel" name="phone" placeholder="Mobile Number">
+                <input type="text" name="custom_subject" placeholder="Email Subject">
+            </div>
+            <textarea name="message" cols="30" rows="10" placeholder="Your Message Here..." required></textarea>
+            
+            <div class="form-btn-box">
+                <button type="submit" class="btn">Send Message</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- JAVA SCRIPT FOR AUTOMATIC ACTIVE LINK SPY & NEON GLOW SWITCH -->
+    <script>
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.navbar a');
+
+        window.onscroll = () => {
+            let top = window.scrollY;
+
+            sections.forEach(sec => {
+                let offset = sec.offsetTop - 150; 
+                let height = sec.offsetHeight;
+                let id = sec.getAttribute('id');
+
+                if(top >= offset && top < offset + height) {
+                    navLinks.forEach(links => {
+                        links.classList.remove('active');
+                        document.querySelector('.navbar a[href*=' + id + ']').classList.add('active');
+                    });
+                }
+            });
+        };
+    </script>
+
+</body>
+</html>
