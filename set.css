@@ -472,3 +472,30 @@ header {
     width: 180px;
     height: 55px;
 }
+
+/* ==========================================================================
+   7. MOBILE RESPONSIVE FIXES (ADDED TO END)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .home, .about-container { 
+        flex-direction: column !important; 
+        text-align: center !important; 
+    }
+    
+    .img-box, .about-img-box { 
+        width: 100% !important; 
+        margin: 20px auto !important; 
+    }
+    
+    .contact-form .input-box { 
+        flex-direction: column !important; 
+    }
+    
+    .contact-form .input-box input { 
+        width: 100% !important; 
+    }
+    
+    .portfolio-grid { 
+        grid-template-columns: 1fr !important; 
+    }
+}
