@@ -13,7 +13,7 @@
     <!-- Header / Navigation -->
     <header>
         <a href="#" class="logo-img-link">
-            <img src="Logo.png" alt="Faizal Logo" class="nav-logo">
+            <img src="logo.png" alt="Faizal Logo" class="nav-logo">
         </a>
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
@@ -128,10 +128,10 @@
                 </div>
             </div>
 
-            <!-- Card 3: Video Production -->
-            <div class="portfolio-card">
+            <!-- Card 3: Video Production (Clickable) -->
+            <div class="portfolio-card" onclick="toggleFullscreen(this)" style="cursor: pointer;">
                 <div class="card-img-box">
-                    <img src="videoedit.jpg" alt="Video Editing Project">
+                    <video src="vid1.mp4" muted loop playsinline></video>
                 </div>
                 <div class="card-layer">
                     <h4>Video Editing</h4>
@@ -152,21 +152,14 @@
         </div>
     </section>
 
-    <!-- 4. Contact Section (CONNECTED TO GMAIL) -->
+    <!-- 4. Contact Section -->
     <section class="contact" id="contact">
         <h2 class="section-title">Contact <span>Me</span></h2>
         <p class="section-subtitle">Let's collaborate on your next big creative project!</p>
 
-        <!-- Web3Forms Endpoint Integration -->
         <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
-            
-            <!-- REQUIRED: Paste your Web3Forms Access Key here -->
             <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
-            
-            <!-- OPTIONAL: Customizes the subject line of the email you receive -->
             <input type="hidden" name="subject" value="New Portfolio Contact Submission">
-            
-            <!-- OPTIONAL: Anti-spam Honeypot field (hidden from real users) -->
             <input type="hidden" name="from_name" value="Portfolio Notification">
             <input type="checkbox" name="botcheck" class="hidden-honeypot" style="display: none;">
 
@@ -186,19 +179,18 @@
         </form>
     </section>
 
-    <!-- JAVA SCRIPT FOR AUTOMATIC ACTIVE LINK SPY & NEON GLOW SWITCH -->
+    <!-- SCRIPT FOR NAVIGATION & VIDEO FULLSCREEN -->
     <script>
+        // Automatic Active Link Spy
         const sections = document.querySelectorAll('section');
         const navLinks = document.querySelectorAll('.navbar a');
 
         window.onscroll = () => {
             let top = window.scrollY;
-
             sections.forEach(sec => {
                 let offset = sec.offsetTop - 150; 
                 let height = sec.offsetHeight;
                 let id = sec.getAttribute('id');
-
                 if(top >= offset && top < offset + height) {
                     navLinks.forEach(links => {
                         links.classList.remove('active');
@@ -207,6 +199,19 @@
                 }
             });
         };
+
+        // Video Fullscreen Functionality
+        function toggleFullscreen(element) {
+            const video = element.querySelector('video');
+            if (video) {
+                if (video.requestFullscreen) {
+                    video.requestFullscreen();
+                } else if (video.webkitRequestFullscreen) { /* Safari */
+                    video.webkitRequestFullscreen();
+                }
+                video.play();
+            }
+        }
     </script>
 
 </body>
