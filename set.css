@@ -40,7 +40,7 @@ section {
 }
 
 /* ==========================================================================
-   2. HEADER & NAVIGATION BAR WITH NEON GLOW STYLES
+   2. HEADER & NAVIGATION BAR
    ========================================================================== */
 header {
     position: fixed;
@@ -83,7 +83,6 @@ header {
     text-shadow: none;
 }
 
-/* THE NEON GLOW AURA EFFECT */
 .navbar a:hover,
 .navbar a.active {
     color: #00abf0;
@@ -169,11 +168,10 @@ header {
     color: #081b29;
 }
 
-/* Profile Circle Components */
 .img-box {
     position: relative;
-    width: 420px;  
-    height: 420px; 
+    width: 420px;
+    height: 420px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -186,16 +184,16 @@ header {
     height: 100%;
     background: transparent;
     border: 6px solid #00abf0;
-    border-radius: 50%;        
+    border-radius: 50%;
     box-shadow: 0 0 25px #00abf0, inset 0 0 25px #00abf0;
 }
 
 .hero-avatar {
-    width: 62%;         
-    height: 62%;        
-    border-radius: 50%; 
-    object-fit: cover;  
-    border: 4px solid #081b29; 
+    width: 62%;
+    height: 62%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #081b29;
     z-index: 10;
 }
 
@@ -206,7 +204,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #05131d; 
+    background: #05131d;
 }
 
 .about-container {
@@ -224,7 +222,7 @@ header {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-top: 50px; 
+    margin-top: 50px;
 }
 
 .about-img-box {
@@ -274,7 +272,7 @@ header {
 
 .about-right {
     flex: 1.3;
-    margin-top: 50px; 
+    margin-top: 50px;
 }
 
 .content-title {
@@ -353,7 +351,7 @@ header {
     border: 2px solid #00abf0;
     box-shadow: 0 0 15px rgba(0, 171, 240, 0.1);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
-    height: 380px; 
+    height: 380px;
 }
 
 .portfolio-card:hover {
@@ -374,19 +372,19 @@ header {
 .card-img-box img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover;
     opacity: 0.8;
     transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
 .portfolio-card:hover .card-img-box img {
     transform: scale(1.1);
-    opacity: 0.4; 
+    opacity: 0.4;
 }
 
 .card-layer {
     position: absolute;
-    bottom: -100%; 
+    bottom: -100%;
     left: 0;
     width: 100%;
     height: 100%;
@@ -399,7 +397,7 @@ header {
 }
 
 .portfolio-card:hover .card-layer {
-    bottom: 0; 
+    bottom: 0;
 }
 
 .card-layer h4 {
@@ -472,30 +470,73 @@ header {
     width: 180px;
     height: 55px;
 }
-
 /* ==========================================================================
-   7. MOBILE RESPONSIVE FIXES (ADDED TO END)
+   7. MOBILE RESPONSIVENESS
    ========================================================================== */
+
+/* For screens smaller than 768px (Tablets & Phones) */
 @media (max-width: 768px) {
-    .home, .about-container { 
-        flex-direction: column !important; 
-        text-align: center !important; 
+    header {
+        padding: 20px 5%;
+    }
+
+    section {
+        padding: 80px 5% 50px;
+    }
+
+    /* Stack elements in Hero section */
+    .home {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 150px;
+    }
+
+    .home-content {
+        max-width: 100%;
+        margin-top: 30px;
+    }
+
+    .img-box {
+        width: 300px;
+        height: 300px;
+        margin-right: 0;
+    }
+
+    /* Stack About section */
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-grid {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    /* Adjust Contact Form inputs */
+    .contact-form .input-box input {
+        width: 100%;
+    }
+}
+
+/* For very small screens (Phones) */
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 32px;
     }
     
-    .img-box, .about-img-box { 
-        width: 100% !important; 
-        margin: 20px auto !important; 
+    .home-content h1 {
+        font-size: 40px;
     }
     
-    .contact-form .input-box { 
-        flex-direction: column !important; 
+    .btn-box {
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
     }
     
-    .contact-form .input-box input { 
-        width: 100% !important; 
-    }
-    
-    .portfolio-grid { 
-        grid-template-columns: 1fr !important; 
+    .img-box {
+        width: 250px;
+        height: 250px;
     }
 }
